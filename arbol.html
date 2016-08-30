@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arbol de Prelaciones</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    /* Add a gray background color and some padding to the footer */
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      align-content: center;
+      text-transform: uppercase;
+    }
+    footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      background-color:rgba(211, 215, 236, 0.71);
+      text-align: center;
+
+    }
+    body{
+      position: absolute;;
+      margin: 0;
+      padding-bottom: 6rem;
+      min-height: 100%;
+      background-color: #000;
+      background: url("img/fondo.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    div2{
+      float:left;
+      border:2px solid #000;
+      background:rgba(255, 255, 255, 0.74);
+      width:120px;
+      height: 70px;
+      margin:20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      align-content: center;
+      font-family: arial;
+      border-radius: 16px;
+
+    }
+    .col-sm-2 {
+    width: 10.666667%;
+  }
+  </style>
+</head>
+<body>
+
+
+
+
+<div class="container text-center">
+  <h3>Our Partners</h3>
+  <br>
+  <div class="row">
+    <center>
+    <div2 class="col-sm-2">
+
+    </div2>
+    <div2 class="col-sm-2">
+      <br>
+      <p>Gerencia de proyecto</p>
+    </div2>
+    <div2 class="col-sm-2">
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Partner 3</p>
+    </div2>
+    <div2 class="col-sm-2">
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Partner 4</p>
+    </div2>
+    <div2 class="col-sm-2">
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Partner 5</p>
+    </div2>
+    <div2 class="col-sm-2">
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Partner 6</p>
+    </div2>
+  </center>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+<style>
+    .select{
+      background-color:rgb(251, 237, 0);
+
+    }
+    .vacio{
+      border: 2px solid rgba(255, 255, 255, 0);
+      background: rgba(0, 0, 0, 0)
+    }
+</style>
+<script>
+
+  var x;
+  x=$(document);
+  x.ready(inicializar);
+
+  function inicializar(){
+    var x;
+    x=$("div2");
+    x.click(presionar);
+  }
+  function presionar(){
+    var x;
+    x=$(this);
+    x.toggleClass("select");
+  }
+</script>
+</html>

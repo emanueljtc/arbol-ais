@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Arbol de Prelaciones</title>
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <style>
+        .select{
+          background-color:rgb(251, 237, 0);
+
+        }
+        .vacio{
+          border: 2px solid rgba(255, 255, 255, 0);
+          background: rgba(0, 0, 0, 0)
+        }
+
+        div{
+          float:left;
+          border:2px solid #000;
+          background:rgba(255, 255, 255, 0.74);
+          width:120px;
+          height: 70px;
+          margin:20px;
+          font-size: 14px;
+          font-weight: bold;
+          text-decoration: none;
+          align-content: center;
+          font-family: arial;
+          border-radius: 16px;
+
+        }
+        h3 {
+        	text-align: center;
+        	font-size: 30px;
+        	font-family:Lucida Sans Unicode;
+          text-transform: uppercase;
+        }
+        p {
+        	font-size: 18px;
+        	font-weight: bold;
+        	text-decoration: none;
+          align-content: center;
+          text-transform: uppercase;
+        }
+        body{
+          position: absolute;;
+          margin: 0;
+          padding-bottom: 6rem;
+          min-height: 100%;
+          background-color: #000;
+          background: url("img/fondo.jpg") no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+        header{
+          color:#fff;
+        }
+        footer{
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background-color:rgba(211, 215, 236, 0.71);
+            text-align: center;
+
+        }
+        #logoa {
+            width: 175px;
+            height: 132px;
+            margin: 4%;
+            margin-top: -8%;
+            float: left;
+          }
+          #logob {
+            width: 175px;
+            height: 132px;
+            margin: 4%;
+            margin-top: -8%;
+            float: right;
+            }
+            
+    </style>
+    <script>
+
+        var x;
+      x=$(document);
+      x.ready(inicializar);
+
+      function inicializar(){
+        var x;
+        x=$("div");
+        x.click(presionar);
+      }
+      function presionar(){
+        var x;
+        x=$(this);
+        x.toggleClass("select");
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <header>
+        <center>
+          <membrete>
+        		<p>República Bolivariana de Venezuela<br>
+        		Universidad Experimental de los Llanos Centrales Rómulo Gallegos<br>
+        		Área de Ingenería de Sistemas<br>
+            Carrera 601 - Ingenería en Informática</p>
+            <img id="logoa" src="img/logoa.png" />
+            <img id="logob" src="img/logob.png" />
+        	</membrete>
+        <h3>Árbol de Prelaciones</h3>
+      </scenter>
+      </header>
+  <section class="arbol">
+          <br>
+          <div class="arbol-item"><br>1ero <br> UC acum: 19</div>
+          <div class="arbol-item" id='mate1'><br>Matematica I<br> 5 UC</div>
+          <div class="arbol-item" id='funda'><br>Fundamentos de la Informática<br>3 UC</div>
+          <div id='log'><br>Lógica Matemática<br>3 UC</div>
+          <div id='leng'><br>Lenguaje y Comunicación<br>2 UC</div>
+          <div id='ingles1'><br>Ingles I<br>2 UC</div>
+          <div id='fc'><br>Formación Constitucional<br>2 UC</div>
+          <div id='dep'><br>Deporte<br>2 UC</div>
+          <br>
+          <div><br>2do <br> UC acum: 39</div>
+          <div id='mate2'><br>Matematica II<br> 5 UC</div>
+          <div id='fisica1'><br>Fisica I<br>4 UC</div>
+          <div id='alg1'><br>Algoritmos I<br>3 UC</div>
+          <div id='pct'><br>PCT<br>2 UC<br>13 UC aprob.</div>
+          <div id='ingles1'><br>Ingles II<br>2 UC</div>
+          <div id='elect1'><br>Electiva I<br>2 UC<br>13 UC aprob.</div>
+          <div id='ac'><br>Arte y Cultura<br>2 UC</div>
+          <br>
+          <div><br>3ro <br> UC acum: 59</div>
+          <div id='mate3'><br>Matematica III<br> 5 UC</div>
+          <div id='fisica2'><br>Fisica II<br>4 UC</div>
+          <div id='alg2'><br>Algoritmos II<br>3 UC</div>
+          <div id='pg1'><br>Programación I<br>4 UC</div>
+          <div id='mti'><br>MTI<br>2 UC <br> 30 UC aprob.</div>
+          <div id='elect2'><br>Electiva II<br>2 UC</div>
+          <div class='vacio'></div>
+          <br>
+          <div><br>4to <br> UC acum: 80</div>
+          <div id='mate4'><br>Matematica IV<br> 5 UC</div>
+          <div id='pe'><br>Probabilidad y Estadistica<br>3 UC</div>
+          <div id='ed1'><br>Extructuras Discretas I<br>4 UC</div>
+          <div id='pg2'><br>Programación II<br>4 UC</div>
+          <div id='bd'><br>Base de Datos<br>3 UC</div>
+          <div id='elect3'><br>Electiva III<br>2 UC</div>
+          <div class='vacio'></div>
+          <br>
+          <div><br>5to <br> UC acum: 100</div>
+          <div id='odc'><br>Organización del Computador<br> 4 UC</div>
+          <div id='ab'><br>Algebra Booleana<br>3 UC</div>
+          <div id='ed2'><br>Extructuras Discretas II<br>4 UC</div>
+          <div id='pg3'><br>Programación III<br>4 UC</div>
+          <div id='ts'><br>Teoria de Sis.<br>2 UC<br>50 UC aprob.</div>
+          <div id='elect4'><br>Electiva IV<br>2 UC</div>
+          <div class='vacio'></div>
+          <br>
+          <div><br>6to <br> UC acum: 121</div>
+          <div id='arcomp'><br>Arquitectura del Comp.<br>4 UC</div>
+          <div id='mtn'><br>Métodos Numéricos<br> 4 UC</div>
+          <div id='invop'><br>Investigación de Op.<br>4 UC</div>
+          <div id='ingeco'><br>Ingenería Eco.<br>2 UC<br>70 UC aprob.</div>
+          <div id='sinf1'><br>Sistemas de Información I<br>5 UC</div>
+          <div id='elect5'><br>Electiva V<br>2 UC</div>
+          <div class='vacio'></div>
+          <br>
+          <div><br>7mo <br> UC acum: 142</div>
+          <div id='sop'><br>Sistemas Operativos<br>4 UC</div>
+          <div id='ctrlp'><br>Ctrl de Proyectos<br> 4 UC<br>86 UC aprob.</div>
+          <div id='oge'><br>Org y Gest Emp.<br>4 UC<br>86 UC aprob.</div>
+          <div id='ti'><br>Traductores e Intérpretes<br>4 UC</div>
+          <div id='sinf2'><br>Sistemas de Información II<br>5 UC</div>
+          <div class='vacio'></div>
+          <div class='vacio'></div>
+          <br>
+          <div><br>8vo <br> UC acum: 163</div>
+          <div id='redes'><br>Redes<br>4 UC</div>
+          <div id='pasantias'><br>Pasantias<br> 4 UC</div>
+          <div id='ea1'><br>Electiva de Área I<br>4 UC<br>100 UC aprob.</div>
+          <div id='lp'><br>Lenguaje de Programación<br>4 UC</div>
+          <div id='sinf3'><br>Sistemas de Información III<br>5 UC</div>
+          <div class='vacio'></div>
+          <div class='vacio'></div>
+          <br>
+          <div><br>9no <br> UC acum: 181</div>
+          <div id='sdist'><br>Sistemas Distribuidos<br>4 UC</div>
+          <div id='pg1'><br>Proyecto de G. I<br> 4 UC<br>157 UC aprob.</div>
+          <div id='ea2'><br>Electiva de Área II<br>4 UC</div>
+          <div id='el1'><br>Electiva Libre I<br>4 UC<br>136 UC aprob.</div>
+          <div id='ep'><br>Etica Profesional<br>2 UC</div>
+          <div class='vacio'></div>
+          <div class='vacio'></div>
+          <div><br>10mo <br> UC acum: 198</div>
+          <div id='gp'><br>Gerencia de Proyecto<br>3 UC</div>
+          <div id='pg2'><br>Proyecto de G. II<br> 4 UC</div>
+          <div id='ea3'><br>Electiva de Área III<br>4 UC</div>
+          <div id='el2'><br>Electiva Libre II<br>4 UC<br>157 UC aprob.</div>
+          <div id='ie'><br>Inf. Educativa<br>3 UC<br>157 UC aprob.</div>
+          <div class='vacio'></div>
+          <div class='vacio'></div>
+    </section>
+  </center>
+    <footer>
+        Creado por: Emanuel Torres & Guillermo Ochoa <br> 2016
+    </footer>
+
+
+  </body>
+</html>
